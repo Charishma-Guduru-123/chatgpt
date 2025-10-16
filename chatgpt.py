@@ -10,7 +10,7 @@ from datetime import datetime
 import os
 
 # ------------------ CONFIG ------------------
-client = Groq(api_key="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")  # ✅ Replace with your valid Groq API key
+client = Groq(api_key="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")  # ✅ Replace with your valid Groq API key
 st.set_page_config(page_title="🌟 Smart Chatbot", page_icon="🤖", layout="centered")
 
 # ------------------ HISTORY SETUP ------------------
@@ -166,4 +166,5 @@ if st.button("🧾 Summarize Chat"):
 
 # ------------------ DOWNLOAD CHAT ------------------
 export_text = "\n".join([f"{r.upper()}: {m}" for r, m in st.session_state.chat_history])
+
 st.download_button("📥 Download Chat as .txt", export_text, file_name=f"chat_{st.session_state.current_date}.txt")
